@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row align-items-center">
+      <div class="col-auto me-auto">
+        <h4>Courses</h4>
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn btn-primary me-1" [routerLink]="['create']">Create course</button>
+        <button type="button" class="btn btn-secondary" (click)="onRefresh()">Refresh list</button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover" *ngIf="courses$ | async as courses; else warning">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Course</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses">
+          <th scope="row">{{ course.id }}</th>
+          <td>{{ course.name }}</td>
+          <td class="d-grid gap-2 d-flex justify-content-end">
+            <button (click)="onUpdate(course.id)" type="button" class="btn btn-outline-warning me-1 mb-1">Update</button>
+            <button (click)="onRemove(course.id)" type="button" class="btn btn-outline-danger mb-1">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #warning>
+      <!-- <div *ngIf="error$ | async; else loading">
+        Error loading courses. Please try again later.
+      </div>
+      <ng-template #loading>
+        <span>Loading courses...</span>
+      </ng-template> -->
+      <span>Loading courses...</span>
+    </ng-template>
+  </div>
+</div>
+<!-- <ng-template #removeModal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Warning</h4>
+    <button type="button" class="btn-close" aria-describedby="modal-title" (click)="onDeclineRemove()"></button>
+  </div>
+  <div class="modal-body">
+    <p>
+      <strong>Are you sure you want to delete the course?</strong>
+    </p>
+    <p>
+      All information associated to this course will be permanently deleted.
+      <span class="text-danger">This operation can not be undone.</span>
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="onDeclineRemove()">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="onConfirmRemove()">Ok</button>
+  </div>
+</ng-template> -->

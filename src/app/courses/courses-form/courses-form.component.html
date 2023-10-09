@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3">
+
+  <div class="col-md-12">
+    <label for="name" class="form-label">Name</label>
+    <input
+      formControlName="name"
+      [ngClass]="{
+        'is-invalid': isInvalid('name')
+      }"
+      type="text"
+      class="form-control"
+      id="name">
+    <div *ngIf="isInvalid('name') && getControl('name')?.hasError('required')" class="invalid-feedback">
+      Name is required.
+    </div>
+    <div *ngIf="isInvalid('name') && getControl('name')?.hasError('minlength')" class="invalid-feedback">
+      Name must have a minimum of 3 characters.
+    </div>
+    <div *ngIf="isInvalid('name') && getControl('name')?.hasError('maxlength')" class="invalid-feedback">
+      Name must have a maximum of 100 characters.
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary me-3">Submit</button>
+    <button (click)="onCancel()" type="button" class="btn btn-secondary">Cancel</button>
+  </div>
+
+</form>

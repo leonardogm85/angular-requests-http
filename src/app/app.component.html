@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container">
+    <a routerLink="" class="navbar-brand">Http</a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li routerLinkActive="active" class="nav-item">
+          <a [routerLink]="['/']" class="nav-link">Home</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a [routerLink]="['/courses']" class="nav-link">Courses</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a [routerLink]="['/rxjs-poc']" class="nav-link">RxJS POC</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a [routerLink]="['/upload-file']" class="nav-link">Upload File</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a [routerLink]="['/reactive-search']" class="nav-link">Reactive Search</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container my-4">
+  <router-outlet></router-outlet>
+</div>

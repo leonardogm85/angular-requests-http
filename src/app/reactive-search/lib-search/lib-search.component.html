@@ -1,0 +1,29 @@
+<div class="search-table">
+  <div class="search-box">
+    <div class="row">
+      <div class="col-md-10 mb-1">
+        <input [formControl]="queryField" type="text" id="myInput" class="form-control" placeholder="Search Lib">
+      </div>
+      <div class="col-md-2">
+        <button (click)="onSearch()" type="button" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </div>
+  <div class="search-list">
+    <h3>{{ total }} Records Found</h3>
+    <table class="table" id="myTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results$ | async">
+          <td>{{ result.name }}</td>
+          <td>{{ result.version }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+### GetCourses
+GET http://localhost:3000/courses
+
+### GetCourseById
+GET http://localhost:3000/courses/1
+
+### AddCourse
+POST http://localhost:3000/courses HTTP/1.1
+content-type: application/json
+{
+  "name": "Python"
+}
+
+### UpdateCourse
+PUT http://localhost:3000/courses/1 HTTP/1.1
+content-type: application/json
+{
+  "name": "PHP"
+}
+
+// RemoveCourseById
+DELETE http://localhost:3000/courses/1

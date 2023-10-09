@@ -1,0 +1,60 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular"
+    },
+    {
+      "id": 2,
+      "name": "React"
+    },
+    {
+      "id": 3,
+      "name": "Vue"
+    },
+    {
+      "id": 4,
+      "name": "C#"
+    },
+    {
+      "id": 5,
+      "name": "Java"
+    },
+    {
+      "name": "Bootstrap",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "Angular Material"
+    },
+    {
+      "name": "Materialize",
+      "id": 8
+    },
+    {
+      "name": "React Native",
+      "id": 9
+    },
+    {
+      "name": "Python",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "name": "PHP"
+    },
+    {
+      "id": 12,
+      "name": "C/C++"
+    },
+    {
+      "id": 13,
+      "name": "AngularJs"
+    },
+    {
+      "id": 14,
+      "name": "NgBootstrap"
+    }
+  ]
+}
