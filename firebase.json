@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "requests-http",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
