@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  course-angular:
+    image: course-angular
+    build: .
+    ports:
+      - 8081:80
